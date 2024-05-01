@@ -14,7 +14,7 @@ const app = new Frog({
 });
 
 // This needs to be uncommented in order to run locally with `next dev`
-export const runtime = "edge";
+// export const runtime = "edge";
 
 app.frame("/", (c) => {
     const { buttonValue, inputText, status } = c;
