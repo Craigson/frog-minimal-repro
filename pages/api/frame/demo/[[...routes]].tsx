@@ -13,8 +13,9 @@ const app = new Frog({
     // hub: neynar({ apiKey: 'NEYNAR_FROG_FM' })
 });
 
-// This needs to be uncommented in order to run locally with `next dev`
-// export const runtime = "edge";
+// This needs to be uncommented in order to run locally with `next dev`. However, must be enabled when deployed to vercel.
+// If runtime is not "edge", serverless fn will timeout and return 504
+export const runtime = "edge";
 
 app.frame("/", (c) => {
     const { buttonValue, inputText, status } = c;
